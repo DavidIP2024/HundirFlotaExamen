@@ -1,13 +1,15 @@
 from nave import Nave
+
+
 class Tablero:
-    def __init__(self,tamanho=10):
-        #self.tamanho = tamanho
+    def __init__(self, tamanho=10):
+        # self.tamanho = tamanho
 
         self.AGUA = 0
         self.TOCADO = 1
         self.HUNDIDO = 2
         # Creamos una nave de ejemplo
-        por1 = Nave("Destructor", "portaaviones",5)
+        por1 = Nave("Destructor", "portaaviones", 5)
         fra1 = Nave("Bismarck", "fragata", 3)
         fra2 = Nave("Prince of Wales", "fragata", 3)
         fra3 = Nave("Graf Spee", "fragata", 3)
@@ -16,7 +18,6 @@ class Tablero:
         sub2 = Nave("U-96", "submarino", 1)
         sub3 = Nave("U-505", "submarino", 1)
         sub4 = Nave("U-534", "submarino", 1)
-
 
         self.casillero = [
             [None, None, None, None, None, None, None, None, None, None],
@@ -38,3 +39,4 @@ class Tablero:
             return self.AGUA
         else:
             return nave.recibir_disparo()
+
